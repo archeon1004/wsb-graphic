@@ -27,6 +27,7 @@ def all_in_one_changes(image):
     print('Process image')
     processimage = Image.open(image)
     imagearray = asarray(processimage)
+    print('Image Size Before conversion: '+ str(imagearray.shape))
     print(imagearray)
     image_h = processimage.size[1] /2
     image_w = processimage.size[0] /2
@@ -34,6 +35,7 @@ def all_in_one_changes(image):
     newimage = processimage.resize(newsize).convert('L').rotate(90)
     newimage.show(title="After Processing")
     newimagearray = asarray(newimage)
+    print('Image Size After conversion: '+ str(newimagearray.shape))
     print(newimagearray)
 
 #Zadanie Pierwsze procesowanie obrazu
@@ -45,8 +47,9 @@ request = urllib3.request(method='GET', url=urladdress, headers={'User-Agent': '
 #print(request.status)
 if request.status == 200:
     print("Download OK")
-    #with open(fileAddress, 'w') as file:
-    #    file.write(request.data)
+    with open(fileAddress, 'wb') as file:   #write data in binary mode
+        file.write(BytesIO(request.data).getvalue())
+        file.close()
     print_image(BytesIO(request.data))
     #grayscale_image(BytesIO(request.data))
     #change_resolution(BytesIO(request.data))

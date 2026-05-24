@@ -71,6 +71,7 @@ urladdress = 'https://wallup.net/wp-content/uploads/2015/06/Romantic-boy.jpg'
 urladdress = 'https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2013/02/Underexposure.jpg/w=1024'
 urladdress = 'https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2013/02/Overexposure.jpg/w=1024'
 urladdress = 'https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2013/02/Correct-Exposure.jpg/w=1024'
+urladdress = 'https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2013/02/Correct-Exposure_2.jpg/w=1024'
 print('Second assignment - histogram and check of the image')
 print('Downloading image from URL: ' + urladdress)
 request = urllib3.request(method='GET', url=urladdress, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0'})

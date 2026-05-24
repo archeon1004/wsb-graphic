@@ -11,7 +11,7 @@ from numpy import ndarray
 
 def analyze_image(img: numpy.ndarray) -> dict:
     if img is None:
-        raise ValueError("Ima attribute is empty")
+        raise ValueError("Img parameter is empty")
     print("Analyzing Image function")
     #print(type(img))
     #print(img.shape)
@@ -27,7 +27,7 @@ def analyze_image(img: numpy.ndarray) -> dict:
             print("3 color channels (rgb)")
             img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         elif channels==4:
-            print("4 color channels (rgba)")
+            print("4 color channels (rgba - rgb with transparency alpha")
             img_gray = cv.cvtColor(img, cv.COLOR_BGRA2GRAY)
     assert img_gray is not None
     total_size_pixels = img_gray.size
